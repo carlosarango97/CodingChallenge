@@ -1,7 +1,7 @@
 CREATE TABLE [dim].[hired_employees](
 	[id] [int] NOT NULL,
 	[name] [varchar](255) NULL,
-    [datetime] [varchar](25) NULL,
+    [datetime] [datetime] NOT NULL,
     [department_id] [int] NULL,
     [job_id] [int] NULL,
     CONSTRAINT PK_hired_employees_id PRIMARY KEY CLUSTERED (id),
