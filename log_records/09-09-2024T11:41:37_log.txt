@@ -1,0 +1,16 @@
+The following records failed in the upload process:
+
+11:41:37  hired_employees  >>>>   157 Kellia Barribal nan 4.0 61.0
+11:41:37  hired_employees  >>>>   663 Catha Gowrie nan 4.0 85.0
+11:41:37  hired_employees  >>>>   789 Jennine Fakeley nan 2.0 94.0
+11:41:37  hired_employees  >>>>   1092 Floria Bineham nan 7.0 137.0
+11:41:37  hired_employees  >>>>   1095 Lowell Blaber nan 9.0 141.0
+11:41:37  hired_employees  >>>>   1252 Merrily Di Biaggi nan 7.0 19.0
+11:41:37  hired_employees  >>>>   1323 Erv Fazan nan 8.0 34.0
+11:41:37  hired_employees  >>>>   1467 Sully Huc nan 8.0 148.0
+11:41:37  hired_employees  >>>>   1483 Paco Ivain nan 5.0 41.0
+11:41:37  hired_employees  >>>>   1686 Bessy Oakeby nan 4.0 53.0
+11:41:37  hired_employees  >>>>   1780 Annabelle Reilly nan 6.0 46.0
+11:41:37  hired_employees  >>>>   1814 Theodore Sammut nan 6.0 86.0
+11:41:37  hired_employees  >>>>   1869 Cesaro Solomon nan 6.0 66.0
+11:41:37  hired_employees  >>>>   1925 Cary Tothe nan 3.0 104.0
