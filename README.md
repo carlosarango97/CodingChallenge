@@ -75,17 +75,21 @@ This project was created to perform different features with database data. This 
 
 3. How to use the project:
     3.1. To perform the upload to the historical data:
+   
         ```bash
         python py_scripts/upload_historical_data.py
-        ```
+       ```
+   
     3.2. To use the API:
-        The API will run in localhost:1500, you must call each of the end-points to perform their process
+        The API will run in localhost:1500, you must call each of the end-points to perform their process.
         End-points:
-            GET /features/employees-hired-by-department-job: Return the report for employees hired on each quarter by area
-            GET /features/hired-employees-with-avg: Return the report for departments with a higher amount of hiring than the company average   
-            POST /bulk/tables: End-point for bulk insert
+   
+            * GET /features/employees-hired-by-department-job: Return the report for employees hired on each quarter by area
+            * GET /features/hired-employees-with-avg: Return the report for departments with a higher amount of hiring than the company average   
+            * POST /bulk/tables: End-point for bulk insert
 
     3.3. The backup process was developed with Azure Data Factory, the pipelines are saved in ./pipeline
         Pipelines:
-            create_backup: This pipeline create an AVRO file for the requested table, the AVRO file will be stored in an Azure Storage Account
-            restore_database: This pipeline, using the AVRO files, restore the data of the tables: job, department and hired_employees
+   
+            * create_backup: This pipeline create an AVRO file for the requested table, the AVRO file will be stored in an Azure Storage Account
+            * restore_database: This pipeline, using the AVRO files, restore the data of the tables: job, department and hired_employees
