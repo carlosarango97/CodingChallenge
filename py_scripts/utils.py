@@ -4,7 +4,6 @@ from sqlalchemy import create_engine
 import pandas as pd
 import json
 from pathlib import Path
-from variables import DB_USERNAME, DB_SERVER, DB_PASSWORD, DB_NAME
 
 def save_log_json(value, table_name, path, is_correct):
     if value != {}:
