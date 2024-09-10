@@ -1,0 +1,9 @@
+{
+	"name": "adf-codechallenge-ca",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b2a5e71b-9369-49e7-bfc1-a44a85a65a65",
+		"tenantId": "64030fcc-6004-4b48-90e4-a52cb40b7335"
+	}
+}
