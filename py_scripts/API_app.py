@@ -3,8 +3,13 @@ from variables import DB_USERNAME, DB_SERVER, DB_PASSWORD, DB_NAME
 from datetime import datetime
 from utils import connect_to_database, format_json_data, validate_data, load_data_to_database
 from sqlalchemy import text
-import pandas as pd
 
+##### 
+## Definition to process the request of the API: 
+## Param: Dictionary, this one must be the JSON data of the request body
+## The definition will transform the data, load it to the database
+## and return the amounts of processed rows and unprocessed rows
+#####
 def process_request(dictionary):
     path = Path('./log_records/' + datetime.now().strftime("%m-%d-%YT%H:%M:%S") + '_log.txt')
     unprocessed_data_count = 0
@@ -40,6 +45,13 @@ def process_request(dictionary):
 
     return processed_data_count, unprocessed_data_count
 
+##### 
+## Definition to generate the report by quarter for each area: 
+## Param: None
+## The definition will return a Pandas dataframe with the result
+## of the query. The report generate the amount of hirings for each 
+## quarter per area in 2021
+#####
 def report_by_quarter_get_data():
     engine = connect_to_database(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME)
     with engine.connect() as connection:
@@ -63,7 +75,13 @@ def report_by_quarter_get_data():
             return_value_df.append({'department':row.DEPARTMENT, 'job':row.JOB, 'Q1':row.Q1, 'Q2':row.Q2, 'Q3':row.Q3, 'Q4':row.Q4})
         return return_value_df
     
-
+##### 
+## Definition to generate the report for hired employees depending of the average: 
+## Param: None
+## The definition will return a Pandas dataframe with the result
+## of the query. The report shows departments with a higher number of hires than 
+## the company's global average
+#####
 def report_hired_employees_with_avg():
     engine = connect_to_database(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME)
     with engine.connect() as connection:
