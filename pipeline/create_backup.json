@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Create backup file",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "@concat('SELECT * FROM DIM.',variables('table_name'))",
+							"value": "@concat('SELECT * FROM DIM.',pipeline().parameters.table_name)",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -53,15 +53,24 @@
 				"outputs": [
 					{
 						"referenceName": "Avro1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": {
+								"value": "@concat(pipeline().parameters.table_name,'.avro')",
+								"type": "Expression"
+							},
+							"folder": {
+								"value": "@pipeline().parameters.table_name",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
-		"variables": {
+		"parameters": {
 			"table_name": {
-				"type": "String",
-				"defaultValue": "job"
+				"type": "string"
 			}
 		},
 		"annotations": []
