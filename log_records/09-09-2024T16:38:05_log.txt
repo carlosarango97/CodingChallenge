@@ -1,0 +1,21 @@
+16:38:05  >>>>  The following records were formated for the table job:
+{
+    "0": {
+        "id": 186,
+        "job": "valor1"
+    },
+    "1": {
+        "id": 187,
+        "job": "valor2"
+    }
+}
+
+(pyodbc.IntegrityError) ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violation of PRIMARY KEY constraint 'PK_job_id'. Cannot insert duplicate key in object 'dim.job'. The duplicate key value is (186). (2627) (SQLExecDirectW)")
+[SQL: INSERT INTO dim.job (id, job) VALUES (?, ?), (?, ?)]
+[parameters: (186, 'valor1', 187, 'valor2')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+The transaction result:
+Succeded records: 0
+Failed records: 2
+

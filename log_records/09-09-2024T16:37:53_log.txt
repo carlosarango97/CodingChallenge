@@ -1,0 +1,16 @@
+16:37:53  >>>>  The following records were formated for the table job:
+{
+    "0": {
+        "id": 186,
+        "job": "valor1"
+    },
+    "1": {
+        "id": 187,
+        "job": "valor2"
+    }
+}
+
+The transaction result:
+Succeded records: 2
+Failed records: 0
+

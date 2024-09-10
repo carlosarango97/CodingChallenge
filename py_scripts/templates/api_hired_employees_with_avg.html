@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees hired by department/job on each quarter in 2021</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+</head>
+<body>
+    <h1>Departments with More Employees Hired</h1>
+    <h3>Report gereated with data from 2021</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Ids</th>
+                <th>Department</th>
+                <th>Hired</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row['ids'] }}</td>
+                <td>{{ row['department'] }}</td>
+                <td>{{ row['hired'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
