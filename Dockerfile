@@ -3,8 +3,8 @@ FROM python:latest
 WORKDIR /python-docker
 
 COPY requirements.txt requirements.txt
-RUN apk update
-RUN apk add gcc unixodbc-dev
+RUN apt-get update
+RUN apt-get install -y gcc unixodbc-dev
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
